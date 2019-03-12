@@ -7,7 +7,7 @@ const state = {
   myBalance: 0,//我的余额
   isLoading: false,//是否已加载完页面
   isMusicMuted: true,//是否静音
-  ASSETSURL: 'https:abc/games/assets'//静态资源CDN地址
+  ASSETSURL: 'https://abc.com/games/assets'//静态资源CDN地址
 }
 const mutations = {
   setLang(state, data) {

@@ -2,8 +2,8 @@ import axios from 'axios'
 import bridge from '@/tools/bridge'
 let REQUESTURL = '/api' //跨域请求代理
 
-//接口请求头部配置//
-let access_token = 'e5270d74-1d37-484b-abe2-55cd4562746f'
+//接口请求头部配置// h5_undefined_cf07c37c-0fbc-4709-a260-08f9351747fd
+let access_token = 'h5_waykimain_e5270d74-1d37-484b-abe2-55cd4562746f'
 const device_uuid = 'ce2b347168ec4a9b8d45cefe7c34075e'
 const lang = 'zh-CHS'
 axios.defaults.headers.post['Content-Type'] = 'application/json';
@@ -32,8 +32,7 @@ if (process.env.NODE_ENV == 'development'){
       return Promise.reject(error)
     })
 } else {
-
-  REQUESTURL = 'https://abc.com:9091/api'
+  REQUESTURL = 'https://abc.com/api'
   axios.interceptors.request.use(
   config => { 
     config.headers.device_uuid = device_uuid
@@ -63,7 +62,7 @@ axios.interceptors.response.use((response)=> {
 });
 
 //暴露域名
-export const SWITCHURL="https://abc.com/"
+export const SWITCHURL="https://abc.com:9091/"
 
 //用户个人信息
 export function getUserInfo() {
